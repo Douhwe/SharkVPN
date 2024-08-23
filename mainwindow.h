@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QTextEdit>
+#include <QProcess>
 
 class MainWindow : public QMainWindow
 {
@@ -13,9 +14,10 @@ public:
     ~MainWindow();
 
 private slots:
-    void onServerSelection();
+    void returnServerName();
 
 private:
     QTextEdit *terminal;
+    QProcess *ipRetrievalProcess;
 };
 #endif // MAINWINDOW_H
